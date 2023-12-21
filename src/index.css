@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 85px;
+  row-gap: 60px;
   min-width: 320px;
   min-height: 100vh;
 }

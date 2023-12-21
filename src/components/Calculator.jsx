@@ -31,13 +31,18 @@ export default function Calculator() {
     }
 
     function calculateEachTipHandler(peopleCount){
+        if(peopleCount < 1){
+            setError(true)
+        }else{
+            setError(false)
+        }
         let count = peopleCount < 1 ? 1 : peopleCount
         setTips((prevTips) => ({ ...prevTips, peopleCount: count, }));
         calculateTotalAmount()
     }
 
 
-    function calculateTotalAmount(peopleCount) {
+    function calculateTotalAmount() {
         setTips((prevTips) => {
           const cal = Math.round(prevTips['amount'] / prevTips['peopleCount'] * 100)/ 100;
           return { ...prevTips, perPerson: cal };

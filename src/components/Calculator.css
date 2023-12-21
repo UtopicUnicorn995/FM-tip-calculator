@@ -123,6 +123,8 @@ input[type=number] {
     cursor: pointer;
     background-color: #00474B;
     color: #fff;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .tips-btn__group button:hover{
@@ -140,6 +142,7 @@ form .tips-result{
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     row-gap: 120px;
 }
 
@@ -187,4 +190,55 @@ form .tips-result{
     display: flex;
     flex-direction: column;
     row-gap: 25px;
+}
+
+@media only screen and (max-width: 1024px){
+   form.calculator-form{
+    max-width: 720px;
+   }
+   form .tips-calculator{
+    row-gap: 32px;
+   }
+   label{
+    font-size: 16px;
+   }
+   .tips-calculator .tips-btn__group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 13px;
+    row-gap: 16px;
+}
+}
+
+@media screen and (max-width: 780px) {
+    body{
+        min-height: 0;
+        padding-top: 50px;
+        row-gap: 40px !important;
+    }
+    form.calculator-form{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        row-gap: 32px;
+    }
+    form .tips-calculator{
+        width: 100%;
+    }
+    form .tips-result{
+        width: 100%;
+    }
+    form .tips-result{
+        row-gap: 32px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .tips-calculator .tips-btn__group{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tip__group{
+        flex-direction: column-reverse;
+    }
 }
