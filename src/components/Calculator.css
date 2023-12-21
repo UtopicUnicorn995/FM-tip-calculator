@@ -1,0 +1,190 @@
+*{
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+form.calculator-form{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+
+    padding: 32px;
+    width: 920px;
+
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.20);
+}
+
+
+form .tips-calculator{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 13px;
+}
+
+.tips-calculator .input-group{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.tips-calculator .input-group label{
+    color: #5E7A7D;
+}
+
+.input-group.peopleCount label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group.peopleCount span{
+    color: #E17457;
+    display: none;
+}
+
+.input-group.peopleCount.error span{
+    color: #E17457;
+    display: inline-block;
+}
+
+.input-group.peopleCount.error input{
+    outline: 2px solid #E17457;
+}
+
+.tips-calculator .input__wrapper{
+    position: relative;
+    cursor: pointer;
+}
+
+.tips-calculator .input__icon{
+    position: absolute;
+    z-index: 2;
+
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+}
+
+.tips-calculator .input-group input{
+    border: none;
+    outline: none;
+    background-color: #F3F9FA;
+    color: #00474B;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 6px 17px;
+
+    text-align: end;
+    width: 100%;
+}
+
+.tips-calculator .tips-btn__group input{
+    padding: 6px 14px;
+    text-align: end;
+    border-radius: 5px;
+}
+
+.input-group .tips-btn__group input::placeholder{
+    text-align: center;
+    color: #547878;
+}
+
+.input-group  input:focus{
+    box-sizing: border-box;
+    outline: 2px solid #26C2AE;
+    border-radius: 5px;
+    color: #00474B;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    appearance:textfield; /* Firefox */
+}
+
+
+.tips-calculator .tips-btn__group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 13px;
+    row-gap: 16px;
+}
+
+.tips-btn__group button{
+    cursor: pointer;
+    background-color: #00474B;
+    color: #fff;
+}
+
+.tips-btn__group button:hover{
+    background-color: #9FE8DF;
+    border: none;
+    color: #00474B;
+    outline: none;
+}
+
+form .tips-result{
+    background-color: #00474B;
+    width: 50%;
+    padding: 40px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+}
+
+.tips-result .tip__group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tips-result .reset-btn{
+    width: 100%;
+    background-color: #26C2AE;
+    color: #00474B;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 9px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+
+.tips-result .reset-btn:hover{
+    background-color: #9FE8DF;
+    border: none;
+    cursor: pointer;
+}
+
+.tips-result .tip-text{
+    font-size: 16px;
+}
+
+.tips-result .tip-text span{
+    font-size: 13px;
+    color: #7F9D9F;
+}
+
+.tips-result .result{
+    color: #26C2AE;
+    font-size: 48px;
+    letter-spacing: -1px;
+}
+
+.tips-result__group{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
