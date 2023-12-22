@@ -56,7 +56,7 @@ export default function Calculator() {
           <label htmlFor="tip">Bill</label>
           <div className="input__wrapper">
             <img className="input__icon" src={dollarSign} alt="" />
-            <input type="number" name="tip" id="tip" onChange={handleBillChange}/>
+            <input placeholder='0' type="number" name="tip" id="tip" onChange={handleBillChange}/>
           </div>
         </div>
         <div className="input-group">
@@ -74,7 +74,7 @@ export default function Calculator() {
           <label htmlFor="">Number of People <span>Can't be zero</span></label>
           <div className="input__wrapper">
             <img className="input__icon" src={peopleSign} alt="" />
-          <input type="number" name="" id="" onChange={(e) => calculateEachTipHandler(e.target.value)}/>
+          <input placeholder="0" type="number" name="" id="" onChange={(e) => calculateEachTipHandler(e.target.value)}/>
           </div>
         </div>
       </div>
