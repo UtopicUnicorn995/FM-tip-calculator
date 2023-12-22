@@ -60,21 +60,21 @@ export default function Calculator() {
           </div>
         </div>
         <div className="input-group">
-          <label htmlFor="">Select Tip %</label>
+          <label htmlFor="tipSelection">Select Tip %</label>
           <div className="tips-btn__group">
             <button type="button" onClick={() => calculateTipHandler(5)}>5%</button>
             <button type="button" onClick={() => calculateTipHandler(10)}>10%</button>
             <button type="button" onClick={() => calculateTipHandler(15)}>15%</button>
             <button type="button" onClick={() => calculateTipHandler(25)}>25%</button>
             <button type="button" onClick={() => calculateTipHandler(50)}>50%</button>
-            <input className="discount__custom" type="number" placeholder="Custom" onChange={() => calculateTipHandler(event.target.value > 0 ? event.target.value : 1)}/>
+            <input id="tipSelection" name="tipSelection" className="discount__custom" type="number" placeholder="Custom" onChange={() => calculateTipHandler(event.target.value > 0 ? event.target.value : 1)}/>
           </div>
         </div>
         <div className={`input-group peopleCount ${error && 'error'}`}>
-          <label htmlFor="">Number of People <span>Can't be zero</span></label>
+          <label htmlFor="peopleCOunt">Number of People <span>Can't be zero</span></label>
           <div className="input__wrapper">
             <img className="input__icon" src={peopleSign} alt="" />
-          <input placeholder="0" type="number" name="" id="" onChange={(e) => calculateEachTipHandler(e.target.value)}/>
+          <input placeholder="0" type="number" name="peopleCOunt" id="peopleCOunt" onChange={(e) => calculateEachTipHandler(e.target.value)}/>
           </div>
         </div>
       </div>
